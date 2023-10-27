@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="50dp"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/title"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:minHeight="48dp"
+        android:textColorHint="@color/hint_color"
+        tools:ignore="VisualLintTextFieldSize" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/etEmailValid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email_validator_text"
+        android:textColor="@color/text_danger"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/username"
+        android:minHeight="48dp"
+        android:textColorHint="@color/hint_color"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/etUserNameValid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/enter_more_then_10_character"
+        android:textColor="@color/text_danger"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:visibility="invisible" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/firstname"
+        android:minHeight="48dp"
+        android:textColorHint="@color/hint_color"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/lastname"
+        android:minHeight="48dp"
+        android:textColorHint="@color/hint_color"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etnAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/age"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColorHint="@color/hint_color"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAgeValid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/age_validator_text"
+        android:textColor="@color/text_danger"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:visibility="invisible" />
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@color/save_color"
+            android:text="@string/save"
+            android:textColor="@color/black"
+            tools:ignore="VisualLintButtonSize" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnClear"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@color/clear_color"
+            android:text="@string/clear"
+            android:textColor="@color/black"
+            tools:ignore="VisualLintButtonSize" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvEnterAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_all_input"
+        android:textColor="@color/text_danger"
+        android:textSize="15sp"
+        android:textStyle="bold|italic"
+        android:visibility="invisible" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
