@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
                 binding.tvEnterAll.visibility = View.VISIBLE
 
-            }else if(!emailValidatorArray.any { email.endsWith(it) }){
+            }else if(emailValid(email)){
 
                 binding.etEmailValid.visibility = View.VISIBLE
 
@@ -93,6 +93,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun emailValid(email: String): Boolean{
+        val regex = Regex("^[A-Za-z0-9+_.-]+@(.+)$")
+        return regex.matches(email)
+    }
 
     private fun inputClear(binding: ActivityMainBinding){
             binding.etEmail.text = null
