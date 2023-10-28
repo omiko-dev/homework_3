@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val emailValidatorArray = arrayOf("@gmail.com", "@yahoo.com", "@outlook.com", "@mail.com", "@inbox.com")
 
         binding.btnSave.setOnClickListener {
 
