@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingHorizontal="50dp"
+    android:background="@color/main_bg_color"
     android:gravity="center"
     tools:context=".MainActivity">
 
@@ -32,7 +32,7 @@
 
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/etEmailValid"
+        android:id="@+id/tvEmailValid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/email_validator_text"
@@ -52,7 +52,7 @@
         tools:ignore="VisualLintTextFieldSize" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/etUserNameValid"
+        android:id="@+id/tvUserNameValid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
@@ -144,7 +144,7 @@
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvEnterAll"
+        android:id="@+id/tvAllValid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/enter_all_input"

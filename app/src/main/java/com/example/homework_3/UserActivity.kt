@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.homework_3.databinding.ActivityUserBinding
 
+@Suppress("DEPRECATION")
 class UserActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityUserBinding
@@ -16,6 +17,7 @@ class UserActivity : AppCompatActivity() {
         binding = ActivityUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // import Person Data
         val person = intent.getSerializableExtra("person_data") as Profile
 
 
@@ -24,9 +26,10 @@ class UserActivity : AppCompatActivity() {
         binding.tvFullName.text = "FullName: ${person.firstName} ${person.lastName}"
         binding.etnAge.text = "Age: ${person.age}"
 
+
+        // Go to |activity_main| layout
         binding.btnAgain.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("old_person", person)
             startActivity(intent)
         }
 
