@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var newProfile: Profile
     private var age: Int = 0
 
+    private val emailValidatorRegex = Regex("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,5}\$")
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
                 binding.tvEnterAll.visibility = View.VISIBLE
 
-            }else if(emailValid(email)){
+            }else if(!emailValid(email, emailValidatorRegex)){
 
                 binding.etEmailValid.visibility = View.VISIBLE
 
@@ -55,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
                 binding.etUserNameValid.visibility = View.VISIBLE
 
-            }else if(strAge.toInt() !in 0..150){
+            }else if(strAge.toInt() < 0){
                 binding.tvAgeValid.visibility = View.VISIBLE
             }
             else{
@@ -64,10 +65,10 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this, UserActivity::class.java)
                 intent.putExtra("person_data", newProfile)
                 startActivity(intent)
-
             }
 
         }
+
         var time = 0L
 
         binding.btnClear.setOnTouchListener { _, event ->
@@ -84,16 +85,9 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-
-
-
-
-
-
     }
 
-    private fun emailValid(email: String): Boolean{
-        val regex = Regex("^[A-Za-z0-9+_.-]+@(.+)$")
+    private fun emailValid(email: String, regex: Regex): Boolean{
         return regex.matches(email)
     }
 
@@ -104,12 +98,5 @@ class MainActivity : AppCompatActivity() {
             binding.etLastName.text = null
             binding.etnAge.text = null
     }
-
-
-//    private fun profileInfoValidation(email: String?, userName: String?, firstName: String?, lastName: String?, age: String?){
-//
-//
-//
-//    }
 
 }
