@@ -94,11 +94,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun inputClearer(binding: ActivityMainBinding){
-            binding.etEmail.text = null
-            binding.etUserName.text = null
-            binding.etFirstName.text = null
-            binding.etLastName.text = null
-            binding.etnAge.text = null
+        binding.apply {
+            etEmail.text = null
+            etUserName.text = null
+            etFirstName.text = null
+            etLastName.text = null
+            etnAge.text = null
+        }
     }
 
 }
